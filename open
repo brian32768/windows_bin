@@ -1,0 +1,63 @@
+#!env python
+#
+#  A script to emulate the command line "open" on MacOS.
+#
+from __future__ import print_function
+import os
+import sys
+from subprocess import Popen
+
+epub   = 'c:/Program Files (x86)/Adobe/Adobe Digital Editions 4.5/DigitalEditions.exe'
+pdf    = 'acrobat'
+image  = 'C:/Program Files/GIMP 2/bin/gimp-2.10.exe'
+text   = 'j:/emacs/bin/runemacs.exe'
+
+desktop = 'c:/Program Files (x86)/ArcGIS/Desktop10.6/bin'
+arcgis = os.path.join(desktop, 'ArcMap.exe')
+arccat = os.path.join(desktop, 'ArcCatalog.exe')
+
+# Something more sophisticated than checking the extension would be nice
+# but this is a good start.
+
+lut = {
+    'epub': epub,
+    'pdf' : pdf,
+    'jpg' : image,
+
+    'txt' : text,
+    'md'  : text,
+    
+    'mxd' : arcgis,
+    'lyr' : arccat,
+#    'shp' : arccat, # this does not work
+    'gdb' : arccat,
+    'sde' : arccat,
+}
+
+def usage():
+    print("I need the name of a file to open.")
+
+def fileopen(file):
+    filename, fileext = os.path.splitext(file)
+    try:
+        app = lut[fileext[1:].lower()]
+	print(app, file)
+    except:
+        print("I don't know how to open %s" % file)
+	exit(-1)
+
+    try:
+        Popen([app, file])
+    except Exception as e:
+        print("Failed to open %s, %s" % (app,e))
+
+    return
+    
+try:
+    file = sys.argv[1]
+except IndexError:
+    usage()
+    exit(-1)
+
+fileopen(file)
+exit(0)
