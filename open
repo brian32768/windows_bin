@@ -9,7 +9,8 @@ from subprocess import Popen
 
 epub   = 'c:/Program Files (x86)/Adobe/Adobe Digital Editions 4.5/DigitalEditions.exe'
 pdf    = 'acrobat'
-image  = 'C:/Program Files/GIMP 2/bin/gimp-2.10.exe'
+draw   = 'j:/InkscapePortable/InkscapePortable.exe'
+image  = 'c:/Program Files/GIMP 2/bin/gimp-2.10.exe'
 text   = 'j:/emacs/bin/runemacs.exe'
 
 desktop = 'c:/Program Files (x86)/ArcGIS/Desktop10.6/bin'
@@ -23,6 +24,8 @@ lut = {
     'epub': epub,
     'pdf' : pdf,
     'jpg' : image,
+
+    'svg' : draw,
 
     'txt' : text,
     'md'  : text,
