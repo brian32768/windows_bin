@@ -1,0 +1,11 @@
+#!/bin/bash
+#
+#  Kill all these sort of orphaned copies of node.exe 
+#  left hanging around after running parcel.
+#
+
+for i in `tasklist | grep \^node.exe | cut -c 18-34`
+do
+	echo $i
+	cmd "/C taskkill /F /PID $i"
+done
