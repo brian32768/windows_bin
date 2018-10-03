@@ -32,7 +32,7 @@ lut = {
     
     'mxd' : arcgis,
     'lyr' : arccat,
-#    'shp' : arccat, # this does not work
+    #    'shp' : arccat, # this does not work
     'gdb' : arccat,
     'sde' : arccat,
 }
@@ -44,23 +44,24 @@ def fileopen(file):
     filename, fileext = os.path.splitext(file)
     try:
         app = lut[fileext[1:].lower()]
-	print(app, file)
+        print(app, file)
     except:
         print("I don't know how to open %s" % file)
-	exit(-1)
+        exit(-1)
 
     try:
+        #print("Opening %s, %s" % (app, file))
         Popen([app, file])
     except Exception as e:
         print("Failed to open %s, %s" % (app,e))
 
     return
-    
+
 try:
-    file = sys.argv[1]
+    for file in sys.argv[1:]:
+    	fileopen(os.path.abspath(file))
 except IndexError:
     usage()
     exit(-1)
 
-fileopen(file)
 exit(0)
