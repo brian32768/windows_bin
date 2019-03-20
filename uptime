@@ -1,0 +1,2 @@
+echo "Hey ${USERNAME}, stop twitching. This is a WINDOWS computer, not Linux"
+echo "I've been up since this morning!"
