@@ -13,22 +13,28 @@ draw   = 'j:/InkscapePortable/InkscapePortable.exe'
 image  = 'c:/Program Files/GIMP 2/bin/gimp-2.10.exe'
 text   = 'j:/emacs/bin/runemacs.exe'
 
-calc   = 'c:/Program Files/LibreOffice/program/scalc.exe'
+libre  = 'c:/Program Files/LibreOffice/program/'
+calc   = os.path.join(libre, 'scalc.exe')
+word   = os.path.join(libre, 'soffice.exe')
 
-desktop = 'c:/Program Files (x86)/ArcGIS/Desktop10.6/bin'
+desktop = 'c:/Program Files (x86)/ArcGIS/Desktop10.7/bin'
 arcgis = os.path.join(desktop, 'ArcMap.exe')
 arccat = os.path.join(desktop, 'ArcCatalog.exe')
 
 # Something more sophisticated than checking the extension would be nice
 # but this is a good start.
 
-lut = {
+lut = { 
+    'doc' : word,
+    'docx': word,
+    'odf' : word,
+    'ods' : calc,
+
+    'svg' : draw,
+   
     'epub': epub,
     'pdf' : pdf,
     'jpg' : image,
-    'ods' : calc,
-    
-    'svg' : draw,
 
     'txt' : text,
     'md'  : text,
