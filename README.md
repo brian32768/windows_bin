@@ -1,7 +1,9 @@
 # windows_bin
 The files I keep in my Windows bin folder.
 
-bashrc    I load this from the real .bashrc
+bashrc    I load this from the real ~/.bashrc
+
+condarc   This gets loaded from ~/.condarc
 
 drmi	  Purge dead Docker images
 

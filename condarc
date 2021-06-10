@@ -1,0 +1,14 @@
+# The forge was interfering with esri so it's turned off right now
+#channels:
+#  - esri
+#  - conda-forge
+#  - defaults
+
+ssl_verify: true
+envs_dirs:
+  - C:/ArcGISPro/bin/Python/envs
+  - ${LOCALAPPDATA}/ESRI/conda/envs
+pkgs_dirs:
+  - ${LOCALAPPDATA}/ESRI/conda/pkgs
+  - C:/ArcGISPro/bin/Python/pkgs
+changeps1: true

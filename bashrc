@@ -34,7 +34,7 @@ alias gis="ssh bwilson@cc-gis"
 alias cache="ssh cc-giscache"
 alias cachegis="ssh gis@cc-giscache"
 
-alias bellman="ssh bellman.wildsong.biz"
+alias bellman="ssh bwilson@bellman.wildsong.biz"
 alias bluehost="ssh -v wildsong@162.241.219.110"
 alias map46="ssh cc-testmaps"
 
@@ -62,6 +62,10 @@ test -e $J && PATH=$PATH:$J
 
 # Add yarn
 #PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+
+CONDA_PATH=$HOME/Miniconda3
+export CONDARC=$HOME/bin/condarc
+source ${CONDA_PATH}/etc/profile.d/conda.sh
 
 export PATH
 export WINHOME

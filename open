@@ -1,17 +1,16 @@
-#!env python
+#!env python3
 #
 #  A script to emulate the MacOS command line "open".
 #
-from __future__ import print_function
 import os
 import sys
 from subprocess import Popen
 
 epub   = 'c:/Program Files (x86)/Adobe/Adobe Digital Editions 4.5/DigitalEditions.exe'
-pdf    = 'acrobat'
+pdf    = 'AcroRD32.exe'
 draw   = 'j:/InkscapePortable/InkscapePortable.exe'
 image  = 'c:/Program Files/GIMP 2/bin/gimp-2.10.exe'
-text   = 'j:/emacs/bin/runemacs.exe'
+text   = 'runemacs.exe'
 
 libre  = 'c:/Program Files/LibreOffice/program/'
 calc   = os.path.join(libre, 'scalc.exe')
