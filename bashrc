@@ -57,11 +57,19 @@ test -e $J && PATH=$PATH:$J
 # Add yarn
 #PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
-CONDA_PATH="${WINHOME}/Miniconda3"
+#CONDA_PATH="${WINHOME}/Miniconda3"
+CONDA_PATH="/c/ArcGISPro/bin/Python/Scripts"
 if [ -d "${CONDA_PATH}" ]; then
   CONDARC=${WINHOME}/bin/condarc
   export CONDARC
-  . ${CONDA_PATH}/etc/profile.d/conda.sh
+  CONDASH="${CONDA_PATH}/etc/profile.d/conda.sh"
+  if [ -f "$CONDASH" ]; then
+    # This works if Miniconda is installed
+    . $CONDASH
+  else
+    # This might work for ESRI w/o Miniconda
+    PATH=${PATH}:${CONDA_PATH}
+  fi
 fi
 
 export PATH
