@@ -57,9 +57,12 @@ test -e $J && PATH=$PATH:$J
 # Add yarn
 #PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
-CONDA_PATH=${WINHOME}/Miniconda3
-export CONDARC=${HOME}/bin/condarc
-source ${CONDA_PATH}/etc/profile.d/conda.sh
+CONDA_PATH="${WINHOME}/Miniconda3"
+if [ -d "${CONDA_PATH}" ]; then
+  CONDARC=${HOME}/bin/condarc
+  export CONDARC
+  . ${CONDA_PATH}/etc/profile.d/conda.sh
+fi
 
 export PATH
 export WINHOME
