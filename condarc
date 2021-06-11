@@ -1,8 +1,8 @@
 # The forge was interfering with esri so it's turned off right now
-#channels:
-#  - esri
+channels:
+  - esri
 #  - conda-forge
-#  - defaults
+  - defaults
 
 ssl_verify: true
 envs_dirs:
