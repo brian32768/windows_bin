@@ -25,16 +25,21 @@ alias winhome="pushd ${WINHOME}"
 alias agp="pushd ${HOME}/ArcGISPro_Projects"
 alias d="pushd ${WINHOME}/Downloads"
 alias repos="pushd ${WINHOME}/source/repos"
+alias pictures="pushd ${WINHOME}/Pictures"
+alias documents="pushd ${WINHOME}/Documents"
 
 alias apps="cd /c/inetpub/wwwroot/Apps"
 
 alias books="pushd /j/Books/"
 alias cc="ssh cc-testmaps"
 alias gis="ssh bwilson@cc-gis"
+alias flex="ssh gis@cc-gislicense"
 alias cache="ssh cc-giscache"
 alias cachegis="ssh gis@cc-giscache"
 
-alias bellman="ssh bwilson@bellman.wildsong.biz"
+#export BELLMAN="47.33.165.207"
+export BELLMAN="bellman.wildsong.biz"
+alias bellman="ssh ${BELLMAN}"
 alias bluehost="ssh -v wildsong@162.241.219.110"
 alias map46="ssh cc-testmaps"
 
@@ -63,8 +68,8 @@ test -e $J && PATH=$PATH:$J
 # Add yarn
 #PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
-CONDA_PATH=$HOME/Miniconda3
-export CONDARC=$HOME/bin/condarc
+CONDA_PATH=${WINHOME}/Miniconda3
+export CONDARC=${HOME}/bin/condarc
 source ${CONDA_PATH}/etc/profile.d/conda.sh
 
 export PATH
