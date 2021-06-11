@@ -57,11 +57,16 @@ test -e $J && PATH=$PATH:$J
 # Add yarn
 #PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
-#CONDA_PATH="${WINHOME}/Miniconda3"
-CONDA_PATH="/c/ArcGISPro/bin/Python/Scripts"
+# This Esri thing fails, it will insist on modifying your .bash_profile
+# and once it does, it will try to run a script called
+# conda.sh from a non-existent path somewhere in TMP.
+#CONDA_PATH="/c/ArcGISPro/bin/Python/Scripts"
+#
+# My workaround was to install the Miniconda version
+CONDA_PATH="${WINHOME}/Miniconda3"
+
 if [ -d "${CONDA_PATH}" ]; then
-  CONDARC=${WINHOME}/bin/condarc
-  export CONDARC
+  CONDARC=${HOME}/bin/condarc
   CONDASH="${CONDA_PATH}/etc/profile.d/conda.sh"
   if [ -f "$CONDASH" ]; then
     # This works if Miniconda is installed
