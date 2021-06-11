@@ -1,21 +1,10 @@
 # At work they put home on J: which is a network drive, a fine idea, 
 # but most Windows programs expect it to be on C:
-if [ -d /c/Users/bwilson.CLATSOP ]; then
-    WINHOME="/c/Users/bwilson.CLATSOP"
+WINHOME="/c/Users/${USERNAME}"
 
-    # Additional tools installed with MinGW setup program live here...
-    PATH=${WINHOME}/Portable/msys/1.0/bin:$PATH
-else
-    WINHOME="/c/Users/${USERNAME}"
-
-    # I think the ming64 is already installed here at home
-    #PATH=/ming64/bin:$PATH
-fi
-export WINHOME
-
-# I cannot override HOME here, I'd have to do that in Windows
-# and I am pretty sure I don't want to do that.
-#export HOME....
+# Additional tools installed with MinGW setup program live here...
+MSYS="${WINHOME}/Portable/msys/1.0/bin"
+test -d $MSYS && PATH=$MSYS:$PATH
 
 PATH=$PATH:"/c/Program Files (x86)/Adobe/Acrobat Reader DC/Reader"
 alias acrobat=AcroRD32.exe
