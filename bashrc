@@ -59,7 +59,7 @@ test -e $J && PATH=$PATH:$J
 
 CONDA_PATH="${WINHOME}/Miniconda3"
 if [ -d "${CONDA_PATH}" ]; then
-  CONDARC=${HOME}/bin/condarc
+  CONDARC=${WINHOME}/bin/condarc
   export CONDARC
   . ${CONDA_PATH}/etc/profile.d/conda.sh
 fi
