@@ -2,13 +2,6 @@
 # but most Windows programs expect it to be on C:
 WINHOME="/c/Users/${USERNAME}"
 
-# Additional tools installed with MinGW setup program live here...
-MSYS="${WINHOME}/Portable/msys/1.0/bin"
-test -d $MSYS && PATH=$MSYS:$PATH
-
-PATH=$PATH:"/c/Program Files (x86)/Adobe/Acrobat Reader DC/Reader"
-alias acrobat=AcroRD32.exe
-
 alias home="pushd ${HOME}"
 alias winhome="pushd ${WINHOME}"
 alias agp="pushd ${HOME}/ArcGISPro_Projects"
@@ -45,14 +38,9 @@ export npm_config_scope="@map46"
 #PATH=$PATH:${WINHOME}/Portable/nodejs:${WINHOME}/AppData/Roaming/npm
 
 # Emacs
-
-# Add emacs either local or J
-LOCALEMACS="/c/Program Files/Emacs/X86_64/bin/"
-#L=${WINHOME}/Portable/emacs/bin
-J=/j/Portable/emacs/bin
-test -e $J && PATH=$PATH:$J
-#this is already in the environment
-#test -e $LOCALEMACS && PATH=$PATH:$LOCALEMACS
+#LOCALEMACS="/c/Program Files/Emacs/X86_64/bin/"
+LOCALEMACS="/c/Users/bwilson/Portable/emacs/bin/"
+test -e $LOCALEMACS && PATH=$PATH:$LOCALEMACS
 
 # Add yarn
 #PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
