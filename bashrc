@@ -21,7 +21,7 @@ alias cachegis="ssh gis@cc-giscache"
 
 #export BELLMAN="47.33.165.207"
 export BELLMAN="bellman.wildsong.biz"
-alias bellman="ssh ${BELLMAN}"
+alias bellman="ssh bwilson@${BELLMAN}"
 alias bluehost="ssh -v wildsong@162.241.219.110"
 alias map46="ssh cc-testmaps"
 
