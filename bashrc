@@ -9,7 +9,7 @@ alias d="pushd ${WINHOME}/Downloads"
 alias repos="pushd ${WINHOME}/source/repos"
 alias pictures="pushd ${WINHOME}/Pictures"
 alias documents="pushd ${WINHOME}/Documents"
-
+alias acrobat="C:/Program Files (x86)/Adobe/Acrobat Reader DC/Reader/AcroRd32.exe"
 alias apps="cd /c/inetpub/wwwroot/Apps"
 
 alias books="pushd /j/Books/"
@@ -35,35 +35,28 @@ export npm_config_scope="@map46"
 # Add node and npm; note I forced installation into $WINHOME/Portable
 # I tried to move npm and failed (parcel does not like it)
 # Remember to do this: npm config set prefix "c:/Users/bwilson/Portable/npm"
-#PATH=$PATH:${WINHOME}/Portable/nodejs:${WINHOME}/AppData/Roaming/npm
+#export PATH=$PATH:${WINHOME}/Portable/nodejs:${WINHOME}/AppData/Roaming/npm
 
 # Emacs
 #LOCALEMACS="/c/Program Files/Emacs/X86_64/bin/"
 LOCALEMACS="/c/Users/bwilson/Portable/emacs/bin/"
 test -e $LOCALEMACS && PATH=$PATH:$LOCALEMACS
 
-# Add yarn
-#PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
-
 # This Esri thing fails, it will insist on modifying your .bash_profile
 # and once it does, it will try to run a script called
 # conda.sh from a non-existent path somewhere in TMP.
-#CONDA_PATH="/c/ArcGISPro/bin/Python/Scripts"
+#CONDA_PATH="/c/ArcGISPro/bin/Python"
 #
-# My workaround was to install the Miniconda version
-CONDA_PATH="${WINHOME}/Miniconda3"
+# My workaround was to use chocolatey to install the Miniconda version
+CONDA_PATH="c:/tools/miniconda3"
 
 if [ -d "${CONDA_PATH}" ]; then
-  CONDARC=${HOME}/bin/condarc
+# NOTE Set CONDARC in your environment so that everyone sees it not just bash
   CONDASH="${CONDA_PATH}/etc/profile.d/conda.sh"
   if [ -f "$CONDASH" ]; then
     # This works if Miniconda is installed
     . $CONDASH
-  else
-    # This might work for ESRI w/o Miniconda
-    PATH=${PATH}:${CONDA_PATH}
   fi
 fi
 
-export PATH
 export WINHOME

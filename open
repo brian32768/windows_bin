@@ -7,7 +7,7 @@ import sys
 from subprocess import Popen
 
 epub   = 'c:/Program Files (x86)/Adobe/Adobe Digital Editions 4.5/DigitalEditions.exe'
-pdf    = 'AcroRD32.exe'
+pdf    = 'c:/Program Files (x86)/Adobe/Acrobat Reader DC/Reader/AcroRd32.exe'
 draw   = 'j:/InkscapePortable/InkscapePortable.exe'
 image  = 'c:/Program Files/GIMP 2/bin/gimp-2.10.exe'
 text   = 'runemacs.exe'
