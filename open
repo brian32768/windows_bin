@@ -1,4 +1,4 @@
-#!env python
+#!C:/Users/bwilson/AppData/Local/ESRI/conda/envs/p39/python
 #
 #  A script to emulate the MacOS command line "open".
 #
@@ -35,7 +35,9 @@ lut = {
    
     'epub' : epub,
     'pdf'  : pdf,
+    'gif'  : image,
     'jpg'  : image,
+    'png'  : image,
 
     'txt'  : text,
     'md'   : text,
