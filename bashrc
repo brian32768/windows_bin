@@ -27,7 +27,7 @@ alias bluehost="ssh -v wildsong@162.241.219.110"
 alias map46="ssh cc-testmaps"
 alias wenda="ssh -p 2000 bwilson@wenda"
 alias w6gkd='ssh -p 2000 bwilson@w6gkd.w6gkd.radio'
-alias tarra='ssh bwilson@45.76.244.170'
+alias tarra='ssh bwilson@tarra'
 
 export npm_config_access=public
 export npm_config_init_author="Brian H Wilson"
