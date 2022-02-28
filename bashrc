@@ -64,3 +64,7 @@ if [ -d "${CONDA_PATH}" ]; then
 fi
 
 export WINHOME
+alias webgisdr="/c/Program Files/ArcGIS/Portal/tools/webgisdr/webgisdr.bat"
+
+PATH_7Z="/c/Program Files/7-Zip"
+export PATH=$PATH:${PATH_7Z}
