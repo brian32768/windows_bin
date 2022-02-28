@@ -38,6 +38,7 @@ lut = {
     'gif'  : image,
     'jpg'  : image,
     'png'  : image,
+    'tif'  : image,
 
     'txt'  : text,
     'md'   : text,
