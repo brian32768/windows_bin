@@ -15,16 +15,15 @@ alias apps="cd /c/inetpub/wwwroot/Apps"
 
 alias books="pushd /j/Books/"
 alias cc="ssh cc-testmaps"
-alias gis="ssh bwilson@cc-gis"
-alias flex="ssh gis@cc-gislicense"
+alias gis="ssh cc-gis"
+alias flex="ssh cc-gislicense"
 alias cache="ssh cc-giscache"
-alias cachegis="ssh gis@cc-giscache"
 
 alias bellman="ssh bellman"
-alias bluehost="ssh -v wildsong@162.241.219.110"
+alias bluehost="ssh bluehost"
 alias map46="ssh cc-testmaps"
-alias wenda="ssh -p 2000 bwilson@wenda"
-alias w6gkd='ssh -p 2000 w6gkd'
+alias wenda="ssh wenda"
+alias w6gkd='ssh w6gkd'
 alias tarra='ssh tarra'
 
 export npm_config_access=public

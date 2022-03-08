@@ -1,15 +1,24 @@
 # windows_bin
+
 The files I keep in my Windows bin folder.
 
-bashrc    I load this from the real ~/.bashrc
+cmd | desc
+--- | ----
+**bashrc** | echo "source bin/bashrc" >> ~/.bashrc
+**condarc** | Load into conda somehow, see "conda info"
+**drmi** | Purge dead Docker images
+**killnode** | Kill the node.exe processes leftover by parcel.
+**open** | An attempt to make 'open' work like it does in MacOS.
+**uptime** | Something to say when Brian compulsively types "uptime".
 
-condarc   This gets loaded from ~/.condarc
+## Release notes
 
-drmi	  Purge dead Docker images
+This repo was handy so I am using it to test 
+building a release and attaching an asset to it.
 
-killnode  kill the node.exe processes leftover by parcel.
+I want the release file to container the list of bins and this README.md
 
-open      an attempt to make 'open' work like it does in MacOS.
+I want it to be downloadable as a zip file from a fixed location.
 
-uptime	  Something to say when Brian compulsively types "uptime".
-
+[Here](https://stackoverflow.com/questions/5207269/how-to-release-a-build-artifact-asset-on-github-with-a-script)
+are instructions on how to do a release, including an asset file.
