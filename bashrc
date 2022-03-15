@@ -1,6 +1,16 @@
 # At work they put home on J: which is a network drive, a fine idea, 
 # but most Windows programs expect it to be on C:
-WINHOME="/c/Users/${USERNAME}"
+if [ "${USER}" == "" ]; then
+  #echo Linux
+  WINHOME=${HOME}
+  CONDA_PATH="/opt/conda"
+  #alias webgisdr="/c/Program Files/ArcGIS/Portal/tools/webgisdr/webgisdr.bat"
+else
+  WINHOME="/c/Users/${USERNAME}"
+  CONDA_PATH="c:/tools/miniconda3"
+  alias webgisdr="/c/Program Files/ArcGIS/Portal/tools/webgisdr/webgisdr.bat"
+fi
+export WINHOME
 
 alias home="pushd ${HOME}"
 alias winhome="pushd ${WINHOME}"
@@ -48,8 +58,7 @@ test -e $LOCALEMACS && PATH=$PATH:$LOCALEMACS
 # conda.sh from a non-existent path somewhere in TMP.
 #CONDA_PATH="/c/ArcGISPro/bin/Python"
 #
-# My workaround was to use chocolatey to install the Miniconda version
-CONDA_PATH="c:/tools/miniconda3"
+# My workaround was to use chocolatey to install the Miniconda version in parallel on Windows
 
 if [ -d "${CONDA_PATH}" ]; then
 # NOTE Set CONDARC in your environment so that everyone sees it not just bash
@@ -59,9 +68,6 @@ if [ -d "${CONDA_PATH}" ]; then
     . $CONDASH
   fi
 fi
-
-export WINHOME
-alias webgisdr="/c/Program Files/ArcGIS/Portal/tools/webgisdr/webgisdr.bat"
 
 PATH_7Z="/c/Program Files/7-Zip"
 export PATH=$PATH:${PATH_7Z}
