@@ -1,15 +1,22 @@
 # At work they put home on J: which is a network drive, a fine idea, 
 # but most Windows programs expect it to be on C:
-WINHOME="/c/Users/${USERNAME}"
+# I have finally beaten this into submission by setting
+# an environment variable explicitly HOME=C:/Users/bwilson
+# Now it loads everything NORMALLY. FINALLY
 
-alias home="pushd ${HOME}"
-alias winhome="pushd ${WINHOME}"
 alias agp="pushd ${HOME}/ArcGISPro_Projects"
-alias d="pushd ${WINHOME}/Downloads"
-alias ormap="pushd ${WINHOME}/source/ORMAP"
-alias repos="pushd ${WINHOME}/source/repos"
-alias pictures="pushd ${WINHOME}/Pictures"
-alias documents="pushd ${WINHOME}/Documents"
+alias d="pushd ${HOME}/Downloads"
+alias E='emacs'
+alias G='grep'
+alias dc='docker-compose'
+alias gs='git status'
+alias gc='git commit'
+
+alias ormap="pushd ${HOME}/source/ORMAP"
+alias repos="pushd ${HOME}/source/repos"
+alias pictures="pushd ${HOME}/Pictures"
+alias docs="pushd ${HOME}/Documents"
+
 alias acrobat="C:/Program Files (x86)/Adobe/Acrobat Reader DC/Reader/AcroRd32.exe"
 alias apps="cd /c/inetpub/wwwroot/Apps"
 
@@ -31,12 +38,6 @@ export npm_config_init_author="Brian H Wilson"
 export npm_config_init_author_email="brian@wildsong.biz"
 export npm_config_license="MIT"
 export npm_config_scope="@map46"
-
-# I don't have Node and NPM installed right now, need to fix this.
-# Add node and npm; note I forced installation into $WINHOME/Portable
-# I tried to move npm and failed (parcel does not like it)
-# Remember to do this: npm config set prefix "c:/Users/bwilson/Portable/npm"
-#export PATH=$PATH:${WINHOME}/Portable/nodejs:${WINHOME}/AppData/Roaming/npm
 
 # Emacs
 #LOCALEMACS="/c/Program Files/Emacs/X86_64/bin/"
@@ -60,8 +61,8 @@ if [ -d "${CONDA_PATH}" ]; then
   fi
 fi
 
-export WINHOME
 alias webgisdr="/c/Program Files/ArcGIS/Portal/tools/webgisdr/webgisdr.bat"
 
 PATH_7Z="/c/Program Files/7-Zip"
 export PATH=$PATH:${PATH_7Z}
+
