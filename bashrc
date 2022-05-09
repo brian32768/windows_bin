@@ -61,11 +61,8 @@ if [ -d "${CONDA_PATH}" ]; then
   fi
 fi
 
-<<<<<<< HEAD
 alias webgisdr="/c/Program Files/ArcGIS/Portal/tools/webgisdr/webgisdr.bat"
 
-=======
->>>>>>> e9af808259c2818abee8b67f84106ca43ed68514
 PATH_7Z="/c/Program Files/7-Zip"
 export PATH=$PATH:${PATH_7Z}
 
