@@ -12,6 +12,10 @@ else
 fi
 export WINHOME
 
+alias gs='git status'
+alias gc='git commit'
+alias gp='git pull'
+
 alias home="pushd ${HOME}"
 alias winhome="pushd ${WINHOME}"
 alias agp="pushd ${HOME}/ArcGISPro_Projects"
