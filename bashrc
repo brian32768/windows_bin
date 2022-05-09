@@ -11,6 +11,7 @@ alias G='grep'
 alias dc='docker-compose'
 alias gs='git status'
 alias gc='git commit'
+alias gp='git pull'
 
 alias ormap="pushd ${HOME}/source/ORMAP"
 alias repos="pushd ${HOME}/source/repos"
@@ -49,8 +50,7 @@ test -e $LOCALEMACS && PATH=$PATH:$LOCALEMACS
 # conda.sh from a non-existent path somewhere in TMP.
 #CONDA_PATH="/c/ArcGISPro/bin/Python"
 #
-# My workaround was to use chocolatey to install the Miniconda version
-CONDA_PATH="c:/tools/miniconda3"
+# My workaround was to use chocolatey to install the Miniconda version in parallel on Windows
 
 if [ -d "${CONDA_PATH}" ]; then
 # NOTE Set CONDARC in your environment so that everyone sees it not just bash
@@ -61,8 +61,11 @@ if [ -d "${CONDA_PATH}" ]; then
   fi
 fi
 
+<<<<<<< HEAD
 alias webgisdr="/c/Program Files/ArcGIS/Portal/tools/webgisdr/webgisdr.bat"
 
+=======
+>>>>>>> e9af808259c2818abee8b67f84106ca43ed68514
 PATH_7Z="/c/Program Files/7-Zip"
 export PATH=$PATH:${PATH_7Z}
 
