@@ -24,6 +24,8 @@ alias apps="cd /c/inetpub/wwwroot/Apps"
 alias books="pushd /j/Books/"
 alias cc="ssh cc-testmaps"
 alias gis="ssh cc-gis"
+alias servers="ssh cc-gisserver"
+alias datastore="ssh cc-gisdatastore"
 alias flex="ssh cc-gislicense"
 alias cache="ssh cc-giscache"
 
