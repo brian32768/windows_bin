@@ -68,9 +68,12 @@ alias webgisdr="/c/Program Files/ArcGIS/Portal/tools/webgisdr/webgisdr.bat"
 PATH_7Z="/c/Program Files/7-Zip"
 export PATH=$PATH:${PATH_7Z}
 
-# This makes the Server scripts in tools/admin function
-if [ -d 'C:/Program Files/ArcGIS/Server/framework/runtime/ArcGIS/Resources/ArcPy/' ]; then 
+
+if [ -d 'C:/Program Files/ArcGIS/Server/framework/runtime/ArcGIS/Resources/ArcPy/' ]; then
   echo SERVER
+  # This fixes a problem in the Server tools/admin scripts.
   ARCPY="C:/Program Files/ArcGIS/Server/framework/runtime/ArcGIS/Resources/ArcPy/"
   export PYTHONPATH=$ARCPY
+
+  alias content="C:/arcgis/arcgisportal/content/items"
 fi
