@@ -75,5 +75,5 @@ if [ -d 'C:/Program Files/ArcGIS/Server/framework/runtime/ArcGIS/Resources/ArcPy
   ARCPY="C:/Program Files/ArcGIS/Server/framework/runtime/ArcGIS/Resources/ArcPy/"
   export PYTHONPATH=$ARCPY
 
-  alias content="C:/arcgis/arcgisportal/content/items"
+  alias content="cd C:/arcgis/arcgisportal/content/items"
 fi
