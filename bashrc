@@ -69,8 +69,8 @@ PATH_7Z="/c/Program Files/7-Zip"
 export PATH=$PATH:${PATH_7Z}
 
 # This makes the Server scripts in tools/admin function
-ARCPY="C:/Program Files/ArcGIS/Server/framework/runtime/Resources/ArcPy/"
-if [ -d "$ARCPY" ]; then
+if [ -d 'C:/Program Files/ArcGIS/Server/framework/runtime/ArcGIS/Resources/ArcPy/' ]; then 
+  echo SERVER
+  ARCPY="C:/Program Files/ArcGIS/Server/framework/runtime/ArcGIS/Resources/ArcPy/"
   export PYTHONPATH=$ARCPY
 fi
-
