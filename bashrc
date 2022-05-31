@@ -68,3 +68,9 @@ alias webgisdr="/c/Program Files/ArcGIS/Portal/tools/webgisdr/webgisdr.bat"
 PATH_7Z="/c/Program Files/7-Zip"
 export PATH=$PATH:${PATH_7Z}
 
+# This makes the Server scripts in tools/admin function
+ARCPY="C:/Program Files/ArcGIS/Server/framework/runtime/Resources/ArcPy/"
+if [ -d "$ARCPY" ]; then
+  export PYTHONPATH=$ARCPY
+fi
+
