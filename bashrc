@@ -52,8 +52,7 @@ test -e $LOCALEMACS && PATH=$PATH:$LOCALEMACS
 # conda.sh from a non-existent path somewhere in TMP.
 #CONDA_PATH="/c/ArcGISPro/bin/Python"
 #
-# My workaround was to use chocolatey to install the Miniconda version in parallel on Windows
-
+# My workaround was to use chocolatey to install the Miniconda version in parallel on Windows then it needs the CONDA_PATH set in .bashrc
 if [ -d "${CONDA_PATH}" ]; then
 # NOTE Set CONDARC in your environment so that everyone sees it not just bash
   CONDASH="${CONDA_PATH}/etc/profile.d/conda.sh"
@@ -61,6 +60,8 @@ if [ -d "${CONDA_PATH}" ]; then
     # This works if Miniconda is installed
     . $CONDASH
   fi
+else
+  echo No CONDA_PATH set.
 fi
 
 alias webgisdr="/c/Program Files/ArcGIS/Portal/tools/webgisdr/webgisdr.bat"
