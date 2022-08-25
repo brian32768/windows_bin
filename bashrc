@@ -12,9 +12,11 @@ alias dc='docker-compose'
 alias gs='git status'
 alias gc='git commit'
 alias gp='git pull'
+export FAVORITES="C:\Users\bwilson\AppData\Roaming\Esri\ArcGISPro\Favorites"
+alias favorites='pushd $FAVORITES'
 
-alias ormap="pushd ${HOME}/source/ORMAP"
-alias repos="pushd ${HOME}/source/repos"
+alias ormap="pushd ${HOME}/Documents/source/ORMAP"
+alias repos="pushd ${HOME}/Documents/source/repos"
 alias pictures="pushd ${HOME}/Pictures"
 alias docs="pushd ${HOME}/Documents"
 
@@ -44,7 +46,7 @@ export npm_config_scope="@map46"
 
 # Emacs
 #LOCALEMACS="/c/Program Files/Emacs/X86_64/bin/"
-LOCALEMACS="/c/Users/bwilson/Portable/emacs/bin/"
+LOCALEMACS="/c/Users/bwilson/Documents/emacs/bin/"
 test -e $LOCALEMACS && PATH=$PATH:$LOCALEMACS
 
 # This Esri thing fails, it will insist on modifying your .bash_profile
@@ -52,13 +54,17 @@ test -e $LOCALEMACS && PATH=$PATH:$LOCALEMACS
 # conda.sh from a non-existent path somewhere in TMP.
 #CONDA_PATH="/c/ArcGISPro/bin/Python"
 #
-# My workaround was to use chocolatey to install the Miniconda version in parallel on Windows then it needs the CONDA_PATH set in .bashrc
+# My workaround: use chocolatey to install the Miniconda version
+# in parallel on Windows; it needs the CONDA_PATH set somewhere,
+# so I do that in the Windows environment
+
 if [ -d "${CONDA_PATH}" ]; then
 # NOTE Set CONDARC in your environment so that everyone sees it not just bash
   CONDASH="${CONDA_PATH}/etc/profile.d/conda.sh"
   if [ -f "$CONDASH" ]; then
     # This works if Miniconda is installed
     . $CONDASH
+    PATH="$PATH:/c/tools/miniconda3/Scripts"
   fi
 else
   echo No CONDA_PATH set.
