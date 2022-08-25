@@ -4,30 +4,33 @@
 # an environment variable explicitly HOME=C:/Users/bwilson
 # Now it loads everything NORMALLY. FINALLY
 
+# apps
 alias agp="pushd ${HOME}/ArcGISPro_Projects"
 alias d="pushd ${HOME}/Downloads"
 alias E='emacs'
 alias G='grep'
 alias dc='docker-compose'
+alias down='docker-compose down --remove-orphans'
+alais up='docker-compose up -d'
 alias gs='git status'
 alias gc='git commit'
 alias gp='git pull'
-export FAVORITES="C:\Users\bwilson\AppData\Roaming\Esri\ArcGISPro\Favorites"
-alias favorites='pushd $FAVORITES'
+alias acrobat="C:/Program\ Files\ (x86)/Adobe/Acrobat\ Reader\ DC/Reader/AcroRd32.exe"
 
+# places
+export FAVORITES="C:/Users/bwilson/AppData/Roaming/Esri/ArcGISPro/Favorites"
+alias favorites='pushd $FAVORITES'
 alias ormap="pushd ${HOME}/Documents/source/ORMAP"
 alias repos="pushd ${HOME}/Documents/source/repos"
 alias pictures="pushd ${HOME}/Pictures"
 alias docs="pushd ${HOME}/Documents"
-
-alias acrobat="C:/Program Files (x86)/Adobe/Acrobat Reader DC/Reader/AcroRd32.exe"
-alias apps="cd /c/inetpub/wwwroot/Apps"
-
 alias books="pushd /j/Books/"
+alias apps="cd //cc-gis/C$/inetpub/wwwroot/Apps"
+alias items="cd //cc-gis/C$/arcgis/arcgisportal/content/items"
+
+# machines
 alias cc="ssh cc-testmaps"
 alias gis="ssh cc-gis"
-alias servers="ssh cc-gisserver"
-alias datastore="ssh cc-gisdatastore"
 alias flex="ssh cc-gislicense"
 alias cache="ssh cc-giscache"
 
