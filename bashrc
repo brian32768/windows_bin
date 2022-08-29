@@ -4,6 +4,13 @@
 # an environment variable explicitly HOME=C:/Users/bwilson
 # Now it loads everything NORMALLY. FINALLY
 
+# windows
+REPOS=$HOME/Documents/source/repos
+if [ ! -d "$REPOS" ]; then
+  # linux
+  REPOS=$HOME/source/repos
+fi
+
 # apps
 alias agp="pushd ${HOME}/ArcGISPro_Projects"
 alias d="pushd ${HOME}/Downloads"
@@ -21,7 +28,7 @@ alias acrobat="C:/Program\ Files\ (x86)/Adobe/Acrobat\ Reader\ DC/Reader/AcroRd3
 export FAVORITES="C:/Users/bwilson/AppData/Roaming/Esri/ArcGISPro/Favorites"
 alias favorites='pushd $FAVORITES'
 alias ormap="pushd ${HOME}/Documents/source/ORMAP"
-alias repos="pushd ${HOME}/Documents/source/repos"
+alias repos="pushd ${REPOS}"
 alias pictures="pushd ${HOME}/Pictures"
 alias docs="pushd ${HOME}/Documents"
 alias books="pushd /j/Books/"
