@@ -64,7 +64,11 @@ test -e $LOCALEMACS && PATH=$PATH:$LOCALEMACS
 # so I do that in the Windows environment
 #...
 # unless you can't today 2022-12-06
-CONDA_PATH="/c/Users/bwilson/Miniconda3"
+if [ -d "$CONDA_PATH" ]; then
+  echo "CONDA_PATH=$CONDA_PATH"
+else
+  CONDA_PATH="/c/Users/bwilson/Miniconda3"
+fi
 export CONDA_PATH
 
 if [ -d "${CONDA_PATH}" ]; then
