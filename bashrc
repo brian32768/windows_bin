@@ -11,13 +11,17 @@ alias agp="pushd ${HOME}/ArcGISPro_Projects"
 alias d="pushd ${HOME}/Downloads"
 alias e='emacs'
 alias g='grep'
+
 alias dc='docker compose'
 alias de='docker exec -it'
+alias dl='docker compose logs --follow'
 alias down='docker compose down --remove-orphans'
 alias up='docker compose up -d'
+
 alias gs='git status'
 alias gc='git commit'
 alias gp='git pull'
+
 alias acrobat="C:/Program\ Files\ (x86)/Adobe/Acrobat\ Reader\ DC/Reader/AcroRd32.exe"
 
 # places
