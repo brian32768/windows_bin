@@ -12,6 +12,7 @@ alias d="pushd ${HOME}/Downloads"
 alias e='emacs'
 alias g='grep'
 
+alias db='docker buildx build'
 alias dc='docker compose'
 alias de='docker exec -it'
 alias dl='docker compose logs --follow'
