@@ -82,7 +82,7 @@ if [ -d "${CONDA_PATH}" ]; then
   if [ -f "$CONDASH" ]; then
     # This works if Miniconda is installed
     . $CONDASH
-    PATH="$PATH:$CONDA_PATH/Scripts"
+    PATH="$CONDA_PATH/bin:$PATH:$CONDA_PATH/Scripts"
   fi
 else
   echo No CONDA_PATH set.
