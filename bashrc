@@ -6,6 +6,8 @@
 
 REPOS=$HOME/Documents/source
 
+alias ls="ls -FC"
+
 # apps
 alias agp="pushd ${HOME}/ArcGISPro_Projects"
 alias d="pushd ${HOME}/Downloads"
