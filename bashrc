@@ -84,7 +84,7 @@ if [ -d "${CONDA_PATH}" ]; then
   if [ -f "$CONDASH" ]; then
     # This works if Miniconda is installed
     . $CONDASH
-    PATH="$CONDA_PATH/bin:$PATH:$CONDA_PATH/Scripts"
+    PATH="$CONDA_PATH:$PATH:$CONDA_PATH/Scripts"
   fi
 else
   echo No CONDA_PATH set.
@@ -100,3 +100,6 @@ if [ -d 'C:/Program Files/ArcGIS/Server/framework/runtime/ArcGIS/Resources/ArcPy
 
   alias content="cd C:/arcgis/arcgisportal/content/items"
 fi
+
+# Our local Docker registry
+export REGISTRY="cc-testmaps:5000"
