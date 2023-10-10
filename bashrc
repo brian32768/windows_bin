@@ -102,4 +102,4 @@ if [ -d 'C:/Program Files/ArcGIS/Server/framework/runtime/ArcGIS/Resources/ArcPy
 fi
 
 # Our local Docker registry
-export REGISTRY="foxtrot.clatsopcounty.gov"
+export REGISTRY="foxtrot.clatsopcounty.gov:5000"
